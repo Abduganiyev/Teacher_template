@@ -1,0 +1,101 @@
+﻿@using Loyiha_dars.Models
+@model List<Konfrensiya>;
+<!--app-content open-->
+<div class="main-content app-content mt-0">
+    <div class="side-app">
+
+        <!-- CONTAINER -->
+        <div class="main-container container-fluid">
+
+            <!-- PAGE-HEADER -->
+            <div class="page-header">
+                <h1 class="page-title">Konfrensiyalar</h1>
+
+            </div>
+            <div class="row row-sm">
+                <div class="col-lg-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <a asp-controller="AdminHome" asp-action="AddKonfrensiya">
+                                <button class="btn btn-primary"> Qo'shish</button>
+                            </a>
+
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table id="file-datatable" class="table table-bordered text-nowrap key-buttons border-bottom">
+                                    <thead>
+                                        <tr>
+                                            <th class="border-bottom-0">Id</th>
+                                            <th class="border-bottom-0">Mavzu</th>
+                                            <th class="border-bottom-0">Tavsif</th>
+                                            <th class="border-bottom-0">Boshlanish vaqti</th>
+                                            <th class="border-bottom-0">Tugash vaqti</th>
+                                            <th class="border-bottom-0">Maqola Muddati</th>
+                                            <th class="border-bottom-0">Narxi</th>
+                                            <th class="border-bottom-0">Manzil</th>
+                                            <th class="border-bottom-0">Email</th>
+                                            <th class="border-bottom-0">Telefon</th>
+                                            <th class="border-bottom-0">Talablar</th>
+                                            <th class="border-bottom-0">Namuna</th>
+                                            <th class="border-bottom-0">O`zgartirish</th>
+                                            <th class="border-bottom-0">O`chirish</th>
+
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var i in Model)
+                                        {
+                                           
+                                            <tr>
+                                                <td>@i.Id</td>
+                                                <td>@i.Mavzu</td>
+                                                <td>@i.Tavsif</td>
+                                                <td>@i.BoshlanishVaqti</td>
+                                                <td>@i.TugashVaqti</td>
+                                                <td>@i.MaqolaYuborishVaqti</td>
+                                                <td>@i.MaqolaNarxi</td>
+                                                <td>@i.Manzil</td>
+                                                <td>@i.Email</td>
+                                                <td>@i.Telefon</td>
+                                                <td>@i.MaqolaTalablari</td>
+                                                <td>@i.MaqolaNamuna</td>
+                                                <td><a class="btn btn-warning" asp-controller="AdminHome" asp-action="EditKonfrensiya" asp-route-id="@i.Id">O`zgartirish</a></td>
+                                                <td><a class="btn btn-danger" asp-controller="AdminHome" asp-action="DeleteKonfrensiya" asp-route-id="@i.Id">O`chirish</a></td>
+                                            </tr>
+                                        }
+
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- PAGE-HEADER END -->
+            <!-- ROW OPEN -->
+            <!-- ROW CLOSED -->
+            <!-- ROW OPEN -->
+            <!-- ROW CLOSED -->
+            <!-- ROW OPEN -->
+            <!-- ROW END -->
+            <!-- ROW OPEN -->
+            <!-- ROW CLOSED -->
+            <!-- ROW OPEN -->
+            <!-- ROW CLOSED -->
+            <!-- ROW OPEN -->
+            <!-- ROW CLOSED -->
+            <!-- ROW OPEN -->
+            <!-- ROW CLOSED -->
+            <!-- ROW OPEN -->
+            <!-- ROW CLOSED -->
+            <!-- ROW OPEN -->
+            <!-- ROW CLOSED -->
+        </div>
+        <!-- CONTAINER CLOSED -->
+    </div>
+</div>
+<!--app-content closed-->
+ 

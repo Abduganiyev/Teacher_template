@@ -1,0 +1,78 @@
+﻿@model MaqolaEditVM
+<!--app-content open-->
+<div class="main-content app-content mt-0">
+    <div class="side-app">
+
+        <!-- CONTAINER -->
+        <div class="main-container container-fluid">
+
+            <!-- PAGE-HEADER -->
+            <div class="page-header">
+                <h1 class="page-title">Maqolani o`zgartirish</h1>
+                <div>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a asp-controller="AdminHome" asp-action="Maqolalar">Mualliflar</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Maqola qo'shish</li>
+                    </ol>
+                </div>
+            </div>
+            <!-- PAGE-HEADER END -->
+            <!-- ROW-1 OPEN -->
+            <div class="row">
+
+                <!-- COL-END -->
+
+                <div class="col-lg-12 col-md-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Maqolani o`zgartirish</h3>
+                        </div>
+                        <div class="card-body">
+                            <form class="needs-validation" asp-controller="AdminHome" asp-action="EditMaqolalar" asp-route-id="@Model.Id" enctype="multipart/form-data" novalidate>
+                                <div class="form-row">
+                                    <div class="col-xl-3 mb-3">
+                                        <label for="validationCustom01" asp-for="Mavzu"></label>
+                                        <input type="text" asp-for="Mavzu" class="form-control" id="validationCustom01" required>
+                                        <div class="invalid-feedback">Iltimos mavzuni kiriting</div>
+                                    </div>
+                                    
+                                    <div class="col-xl-3 mb-3">
+                                        <label for="validationCustom02" asp-for="Holat"></label>
+                                        <select asp-for="Holat" class="form-control">
+                                            <option value="0">Qabul qilindi</option>
+                                            <option value="1">Yuborilgan</option>
+                                            <option value="2">Rad etilgan</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-xl-3 mb-3">
+                                        <label for="validationCustom02" asp-for="KonfrensiyaId"></label>
+                                        <select asp-for="KonfrensiyaId" class="form-control" asp-items="@ViewBag.Konfrensiya"></select>
+                                    </div>
+                                    <div class="col-xl-3 mb-3">
+                                        <label for="validationCustom02" asp-for="MuallifId"></label>
+                                        <select asp-for="MuallifId" class="form-control" asp-items="@ViewBag.Mualliflar"></select>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 mb-3">
+                                    <label for="validationCustom02" asp-for="EskiFayli"></label>
+                                    <a class="form-control" href="/maqolalar/@Model.EskiFayli"> Ko`rish </a>
+                                </div>
+                                <div class="col-xl-3 mb-3">
+                                    <label for="validationCustom02" asp-for="YangiFayli"></label>
+                                    <input type="file" asp-for="YangiFayli" class="form-control" id="validationCustom02" required>
+                                    <div class="invalid-feedback">Iltimos faylni kiriting</div>
+                                </div>
+
+                                <button class="btn btn-primary" type="submit">O`zgartirish</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ROW-1 CLOSED -->
+        </div>
+        <!-- CONTAINER CLOSED -->
+
+    </div>
+</div>
+<!--app-content closed-->

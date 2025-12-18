@@ -1,0 +1,116 @@
+﻿@model Loyiha_dars.Models.Konfrensiya 
+<!--app-content open-->
+<div class="main-content app-content mt-0">
+    <div class="side-app">
+
+        <!-- CONTAINER -->
+        <div class="main-container container-fluid">
+
+            <!-- PAGE-HEADER -->
+            <div class="page-header">
+                <h1 class="page-title">Konfrensiya qo'shish</h1>
+                <div>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a asp-controller="AdminHome" asp-action="Konfrensiya">Konfrensiyalar</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Konfrensiya qo'shish</li>
+                    </ol>
+                </div>
+            </div>
+            <!-- PAGE-HEADER END -->
+            <!-- ROW-1 OPEN -->
+            <div class="row">
+
+                <!-- COL-END -->
+
+                <div class="col-lg-12 col-md-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Konfrensiya qo'shish</h3>
+                        </div>
+                        <div class="card-body">
+                            <form class="needs-validation" asp-controller="AdminHome" asp-action="AddKonfrensiya" novalidate>
+                                <div class="form-row">
+                                    <div class="col-xl-3 mb-3">
+                                        <label for="validationCustom01" asp-for="Mavzu"></label>
+                                        <input type="text" asp-for="Mavzu" class="form-control" id="validationCustom01" required>
+                                        <div class="invalid-feedback">Iltimos mavzuni kiriting</div>
+                                    </div>
+                                    <div class="col-xl-3 mb-3">
+                                        <label for="validationCustom02" asp-for="Tavsif"></label>
+                                        <input type="text" asp-for="Tavsif" class="form-control" id="validationCustom02" required>
+                                        <div class="invalid-feedback">Iltimos tavsifni kiriting</div>
+                                    </div>
+                                    <div class="col-xl-3 mb-3">
+                                        <label for="validationCustom02" asp-for="BoshlanishVaqti"></label>
+                                        <input type="date" asp-for="BoshlanishVaqti" class="form-control" id="validationCustom02" required>
+                                        <div class="invalid-feedback">Iltimos BoshlanishVaqtini kiriting</div>
+                                    </div>
+                                    <div class="col-xl-3 mb-3">
+                                        <label for="validationCustom02" asp-for="TugashVaqti"></label>
+                                        <input type="date" asp-for="TugashVaqti" class="form-control" id="validationCustom02" required>
+                                        <div class="invalid-feedback">Iltimos TugashVaqtini kiriting</div>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="col-xl-3 mb-3">
+                                        <label for="validationCustom03" asp-for="MaqolaYuborishVaqti"></label>
+                                        <input type="date" asp-for="MaqolaYuborishVaqti" class="form-control" id="validationCustom03" required>
+                                        <div class="invalid-feedback"> MaqolaYuborishVaqtini kiriting</div>
+                                    </div>
+
+                                    <div class="col-xl-3 mb-3">
+                                        <label for="validationCustom03" asp-for="MaqolaNarxi"></label>
+                                        <input type="number" asp-for="MaqolaNarxi" class="form-control" id="validationCustom03" required>
+                                        <div class="invalid-feedback">Narxini kiriting</div>
+                                    </div>
+
+                                    <div class="col-xl-3 mb-3">
+                                        <label for="validationCustom03" asp-for="Manzil"></label>
+                                        <input type="text" asp-for="Manzil" class="form-control" id="validationCustom05" required>
+                                        <div class="invalid-feedback">Manzilni kiriting</div>
+                                    </div>
+
+                                    <div class="col-xl-3 mb-3">
+                                        <label for="validationCustom03" asp-for="Email"></label>
+                                        <input type="email" asp-for="Email" class="form-control" id="validationCustom05" required>
+                                        <div class="invalid-feedback">Emailni kiriting</div>
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+
+                                    <div class="col-xl-3 mb-3">
+                                        <label for="validationCustom03" asp-for="Telefon"></label>
+                                        <input type="text" asp-for="Telefon" class="form-control" id="validationCustom05"
+                                               required>
+                                        <div class="invalid-feedback">Telefon raqam kiriting</div>
+                                    </div>
+
+                                    <div class="col-xl-3 mb-3">
+                                        <label for="validationCustom03" asp-for="MaqolaTalablari"></label>
+                                        <input type="text" asp-for="MaqolaTalablari" class="form-control" id="validationCustom05" required>
+                                        <div class="invalid-feedback">Talablarni kiriting</div>
+                                    </div>
+
+                                    <div class="col-xl-3 mb-3">
+                                        <label for="validationCustom03" asp-for="MaqolaNamuna"></label>
+                                        <input type="text" asp-for="MaqolaNamuna" class="form-control" id="validationCustom05"
+                                               required>
+                                        <div class="invalid-feedback">Namunani kiriting</div>
+                                    </div>
+
+                                </div>
+
+                                <button class="btn btn-primary" type="submit">Qo'shish</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ROW-1 CLOSED -->
+        </div>
+        <!-- CONTAINER CLOSED -->
+
+    </div>
+</div>
+<!--app-content closed-->

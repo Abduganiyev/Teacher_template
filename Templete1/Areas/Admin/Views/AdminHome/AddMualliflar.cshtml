@@ -1,0 +1,109 @@
+﻿@model CreateMuallifVM
+<!--app-content open-->
+<div class="main-content app-content mt-0">
+    <div class="side-app">
+
+        <!-- CONTAINER -->
+        <div class="main-container container-fluid">
+
+            <!-- PAGE-HEADER -->
+            <div class="page-header">
+                <h1 class="page-title">Muallif qo'shish</h1>
+                <div>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a asp-controller="AdminHome" asp-action="Mualliflar">Mualliflar</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Muallif qo'shish</li>
+                    </ol>
+                </div>
+            </div>
+            <!-- PAGE-HEADER END -->
+            <!-- ROW-1 OPEN -->
+            <div class="row">
+
+                <!-- COL-END -->
+
+                <div class="col-lg-12 col-md-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Muallif qo'shish</h3>
+                        </div>
+                        <div class="card-body">
+                            <form class="needs-validation" asp-controller="AdminHome" asp-action="AddMualliflar" novalidate>
+                                <div class="form-row">
+                                    <div class="col-xl-3 mb-3">
+                                        <label for="validationCustom01" asp-for="Ism"></label>
+                                        <input type="text" asp-for="Ism" class="form-control" id="validationCustom01" required>
+                                        <div class="invalid-feedback">Iltimos ismni kiriting</div>
+                                    </div>
+                                    <div class="col-xl-3 mb-3">
+                                        <label for="validationCustom02" asp-for="Familiya"></label>
+                                        <input type="text" asp-for="Familiya" class="form-control" id="validationCustom02" required>
+                                        <div class="invalid-feedback">Iltimos familiyani kiriting</div>
+                                    </div>
+                                    <div class="col-xl-3 mb-3">
+                                        <label for="validationCustom02" asp-for="Sharif"></label>
+                                        <input type="text" asp-for="Sharif" class="form-control" id="validationCustom02" required>
+                                        <div class="invalid-feedback">Iltimos sharifni kiriting</div>
+                                    </div>
+                                    <div class="col-xl-3 mb-3">
+                                        <label for="validationCustom02" asp-for="IshJoyi"></label>
+                                        <input type="text" asp-for="IshJoyi" class="form-control" id="validationCustom02" required>
+                                        <div class="invalid-feedback">Iltimos ish joyini kiriting</div>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="col-xl-3 mb-3">
+                                        <label for="validationCustom03" asp-for="Davlat"></label>
+                                        <input type="text" asp-for="Davlat" class="form-control" id="validationCustom03" required>
+                                        <div class="invalid-feedback"> davlatini kiriting</div>
+                                    </div>
+
+                                    <div class="col-xl-3 mb-3">
+                                        <label for="validationCustom03" asp-for="IlmiyDaraja"></label>
+                                        <input type="text" asp-for="IlmiyDaraja" class="form-control" id="validationCustom03" required>
+                                        <div class="invalid-feedback">Darajani kiriting</div>
+                                    </div>
+
+                                    <div class="col-xl-3 mb-3">
+                                        <label for="validationCustom03" asp-for="IlmiyUnvon"></label>
+                                        <input type="text" asp-for="IlmiyUnvon" class="form-control" id="validationCustom05" required>
+                                        <div class="invalid-feedback">Unvonni kiriting</div>
+                                    </div>
+
+                                    <div class="col-xl-3 mb-3">
+                                        <label for="validationCustom03" asp-for="Email"></label>
+                                        <input type="email" asp-for="Email" class="form-control" id="validationCustom05" required>
+                                        <div class="invalid-feedback">Emailni kiriting</div>
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+
+                                    <div class="col-xl-3 mb-3">
+                                        <label for="validationCustom03" asp-for="Telefon"></label>
+                                        <input type="text" asp-for="Telefon" class="form-control" id="validationCustom05"
+                                               required>
+                                        <div class="invalid-feedback">Telefon raqam kiriting</div>
+                                    </div>
+
+                                    <div class="col-xl-3 mb-3">
+                                        <label for="validationCustom03" asp-for="Parol"></label>
+                                        <input type="password" asp-for="Parol" class="form-control" id="validationCustom05" required>
+                                        <div class="invalid-feedback">Parolni kiriting</div>
+                                    </div>
+
+                                </div>
+
+                                <button class="btn btn-primary" type="submit">Qo'shish</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ROW-1 CLOSED -->
+        </div>
+        <!-- CONTAINER CLOSED -->
+
+    </div>
+</div>
+<!--app-content closed-->
